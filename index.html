@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:cursive;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .content{
+            width: 100vw;
+            height: 100vh;
+            background-color: #5e6c88;
+            display: grid;
+            place-items: center;
+        }
+        h1{
+            font-size: 3rem;
+            letter-spacing: 0.15rem;
+            text-shadow: 0.5px 3px 5px #000;
+            color: rgb(255, 255, 255);
+            position: relative;
+            cursor: pointer;
+        }
+        h1::before{
+            content: "~DANISH~";
+            width: 100%;
+            color: #2ed573;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-right: 0.3rem solid #2ed573;
+            animation: slide 3s linear infinite;
+            overflow: hidden;
+        }
+        @keyframes slide {
+            0%{
+                width:0%;
+            }
+            50%{
+                width:100%;
+            }
+            100%{
+                width:0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>~DANISH~</h1>
+    </div>
+</body>
+</html>
